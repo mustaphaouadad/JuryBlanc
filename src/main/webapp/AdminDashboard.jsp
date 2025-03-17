@@ -72,7 +72,7 @@
                <div class="cardBox">
     <div class="card">
         <div>
-            <div class="numbers">12</div> <!-- عدد المشاريع -->
+            <div class="numbers">12</div> 
             <div class="cardName"> Projets</div>
         </div>
         <div class="iconBx">
@@ -82,7 +82,7 @@
 
     <div class="card">
         <div>
-            <div class="numbers">45</div> <!-- عدد المهام -->
+            <div class="numbers">45</div> 
             <div class="cardName">Tâches</div>
         </div>
         <div class="iconBx">
@@ -92,7 +92,7 @@
 
     <div class="card">
         <div>
-            <div class="numbers">30</div> <!-- عدد الموارد -->
+            <div class="numbers">30</div> 
             <div class="cardName">Ressources</div>
         </div>
         <div class="iconBx">
@@ -102,7 +102,7 @@
 
     <div class="card">
         <div>
-            <div class="numbers">8</div> <!-- عدد الموردين -->
+            <div class="numbers">8</div> 
             <div class="cardName">Fournisseurs</div>
         </div>
         <div class="iconBx">
@@ -121,6 +121,86 @@
                     </div>
                 </div>
 </div>
+                   <!-- ================ Order Details List ================= -->
+    <div class="details">
+    <div class="recentOrders">
+        <div class="cardHeader">
+            <h2> Gestion tache</h2>
+            <a href="#" class="btn">Add task</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>eeeee</td>
+                    <td>eeeeeee</td>
+                    <td>eeeee</td>
+                    <td>action</td>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>eeeeeeee  </td>
+                    <td>zzzzzzzzz</td>
+                    <td> SQL</td>
+                  <td>
+  <a href="#" class="btn edit">
+    <ion-icon name="create-outline"></ion-icon> 
+  </a>
+  <a href="#" class="btn delete">
+    <ion-icon name="trash-outline"></ion-icon> 
+  </a>
+</td>
+                </tr>
+
+                <tr>
+                    <td>rrrrrrrrrr</td>
+                    <td>eeeeeeee</td>
+                    <td>Figma</td>
+                  <td>
+  <a href="#" class="btn edit">
+    <ion-icon name="create-outline"></ion-icon> 
+  </a>
+  <a href="#" class="btn delete">
+    <ion-icon name="trash-outline"></ion-icon> 
+  </a>
+</td>
+                </tr>
+
+                <tr>
+                    <td>API</td>
+                    <td> qqqqqqqqq</td>
+                    <td>Java Spring Boot</td>
+                    <td>
+  <a href="#" class="btn edit">
+    <ion-icon name="create-outline"></ion-icon> 
+  </a>
+  <a href="#" class="btn delete">
+    <ion-icon name="trash-outline"></ion-icon> 
+  </a>
+</td>
+                </tr>
+
+                <tr>
+                    <td>aaa</td>
+                    <td>aa</td>
+                    <td>ddd</td>
+                   <td>
+  <a href="#" class="btn edit">
+    <ion-icon name="create-outline"></ion-icon> 
+  </a>
+  <a href="#" class="btn delete">
+    <ion-icon name="trash-outline"></ion-icon> 
+  </a>
+</td>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
                
 
 
@@ -130,9 +210,8 @@
 
 
 
-
-
-
+</div>
+</div>
 </div>
 
 <script src="style/main.js"></script>
