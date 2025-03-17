@@ -29,15 +29,43 @@
                         <span class="title">Dashboard</span>
                     </a>
                 </li>
-
+                
+              
                 <li>
+                    <a href="GestionDesProjets.jsp">
+                        <span class="icon">
+                             <ion-icon name="folder-open-outline"></ion-icon>
+                        </span>
+                        <span class="title">Gestion des Projets</span>
+                    </a>
+                </li>
+                
+                   <li>
+            <a href="#">
+                <span class="icon">
+                    <ion-icon name="clipboard-outline"></ion-icon>
+                </span>
+                <span class="title">Gestion des Tâches</span>
+            </a>
+        </li>
+                
+                  <li>
+            <a href="#">
+                <span class="icon">
+                    <ion-icon name="hammer-outline"></ion-icon>
+                </span>
+                <span class="title">Gestion des Ressources</span>
+            </a>
+        </li>
+         <li>
                     <a href="#">
                         <span class="icon">
                             <ion-icon name="people-outline"></ion-icon>
                         </span>
-                        <span class="title">Fournisseur</span>
+                        <span class="title">Gestion des Fournisseur</span>
                     </a>
                 </li>
+                
 
                 <li>
                     <a href="#">
@@ -122,82 +150,7 @@
                 </div>
 </div>
                    <!-- ================ Order Details List ================= -->
-    <div class="details">
-    <div class="recentOrders">
-        <div class="cardHeader">
-            <h2> Gestion tache</h2>
-            <a href="#" class="btn">Add task</a>
-        </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <td>eeeee</td>
-                    <td>eeeeeee</td>
-                    <td>eeeee</td>
-                    <td>action</td>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr>
-                    <td>eeeeeeee  </td>
-                    <td>zzzzzzzzz</td>
-                    <td> SQL</td>
-                  <td>
-  <a href="#" class="btn edit">
-    <ion-icon name="create-outline"></ion-icon> 
-  </a>
-  <a href="#" class="btn delete">
-    <ion-icon name="trash-outline"></ion-icon> 
-  </a>
-</td>
-                </tr>
-
-                <tr>
-                    <td>rrrrrrrrrr</td>
-                    <td>eeeeeeee</td>
-                    <td>Figma</td>
-                  <td>
-  <a href="#" class="btn edit">
-    <ion-icon name="create-outline"></ion-icon> 
-  </a>
-  <a href="#" class="btn delete">
-    <ion-icon name="trash-outline"></ion-icon> 
-  </a>
-</td>
-                </tr>
-
-                <tr>
-                    <td>API</td>
-                    <td> qqqqqqqqq</td>
-                    <td>Java Spring Boot</td>
-                    <td>
-  <a href="#" class="btn edit">
-    <ion-icon name="create-outline"></ion-icon> 
-  </a>
-  <a href="#" class="btn delete">
-    <ion-icon name="trash-outline"></ion-icon> 
-  </a>
-</td>
-                </tr>
-
-                <tr>
-                    <td>aaa</td>
-                    <td>aa</td>
-                    <td>ddd</td>
-                   <td>
-  <a href="#" class="btn edit">
-    <ion-icon name="create-outline"></ion-icon> 
-  </a>
-  <a href="#" class="btn delete">
-    <ion-icon name="trash-outline"></ion-icon> 
-  </a>
-</td>
-            </tbody>
-        </table>
-    </div>
-    
+  
      <div class="recentCustomers">
                     <div class="cardHeader">
                         <h2>Les Fournisseurs</h2>
