@@ -67,6 +67,61 @@
                     <img src="#" alt="">
                 </div>
             </div>
+            
+               <!-- ======================= Cards ================== -->
+               <div class="cardBox">
+    <div class="card">
+        <div>
+            <div class="numbers">12</div> <!-- عدد المشاريع -->
+            <div class="cardName"> Projets</div>
+        </div>
+        <div class="iconBx">
+            <ion-icon name="folder-open-outline"></ion-icon>
+        </div>
+    </div>
+
+    <div class="card">
+        <div>
+            <div class="numbers">45</div> <!-- عدد المهام -->
+            <div class="cardName">Tâches</div>
+        </div>
+        <div class="iconBx">
+            <ion-icon name="clipboard-outline"></ion-icon>
+        </div>
+    </div>
+
+    <div class="card">
+        <div>
+            <div class="numbers">30</div> <!-- عدد الموارد -->
+            <div class="cardName">Ressources</div>
+        </div>
+        <div class="iconBx">
+            <ion-icon name="construct-outline"></ion-icon>
+        </div>
+    </div>
+
+    <div class="card">
+        <div>
+            <div class="numbers">8</div> <!-- عدد الموردين -->
+            <div class="cardName">Fournisseurs</div>
+        </div>
+        <div class="iconBx">
+            <ion-icon name="business-outline"></ion-icon>
+        </div>
+    </div>
+    
+     <div class="card">
+                    <div>
+                        <div class="numbers">$7,842</div>
+                        <div class="cardName">Earning</div>
+                    </div>
+
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+</div>
+               
 
 
 
