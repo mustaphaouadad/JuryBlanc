@@ -110,7 +110,7 @@
       </div>
       <div class="modal-body">
         <!-- Formulaire de création de projet -->
-        <form action="#" method="post">
+        <form action="AddProjet" method="post">
           <div class="form-group">
             <label for="projectName">Nom du Projet :</label>
             <input type="text" id="projectName" name="projectName" class="form-control" required>
