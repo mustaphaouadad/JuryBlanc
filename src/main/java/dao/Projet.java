@@ -3,6 +3,7 @@ package dao;
 import java.sql.Connection;
 
 
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -79,6 +80,30 @@ public class Projet {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		return result;
+	}
+	
+	public static int updateProjet(model.Projet p) {
+		int result=0;
+		
+		try {
+			String sql="update gestionConstruction.Projets set NomProjet=?,descriptionProjet=?,dateDebutProjrt=?,dateFinProjet=?,budget=? where idProjet=?";
+			Connection coon=DBConnect.getCoon();
+			PreparedStatement pst=coon.prepareStatement(sql);
+			pst.setString(1,p.getNomProjet());
+			pst.setString(2,p.getDescriptionProjet());
+			pst.setString(3,p.getDateDebutProjrt());
+			pst.setString(4,p.getDateFinProjet());
+			pst.setDouble(5,p.getBudget());
+			result=pst.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
 		
 		return result;
 	}
