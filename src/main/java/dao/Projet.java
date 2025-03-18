@@ -84,6 +84,34 @@ public class Projet {
 		return result;
 	}
 	
+	
+	public static model.Projet getProjetById(int idProjet){
+		model.Projet p =new model.Projet();
+		try {
+			String sql="select * from gestionConstruction.Projets where idProjet="+idProjet;
+			Connection coon=DBConnect.getCoon();
+			 Statement smt =coon.createStatement();
+			 ResultSet rs=smt.executeQuery(sql);
+			 while (rs.next()) {
+				 p.setIdProjet(rs.getInt("idProjet"));
+				 p.setNomProjet(rs.getString("NomProjet"));
+				 p.setDescriptionProjet(rs.getString("descriptionProjet"));
+				 p.setDateDebutProjrt(rs.getString("dateDebutProjrt"));
+				 p.setDateFinProjet(rs.getString("dateDebutProjrt"));
+				 p.setBudget(rs.getDouble("budget"));
+				 
+				
+			}
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return p;
+	}
+	
 	public static int updateProjet(model.Projet p) {
 		int result=0;
 		
