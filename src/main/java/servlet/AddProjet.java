@@ -32,7 +32,7 @@ public class AddProjet extends HttpServlet {
 		int result=dao.Projet.SaveProjet(p);
 		
 		if (result>0) {
-			response.sendRedirect("GestionDesProjets.jsp");
+			response.sendRedirect("DesplayProjet");
 			
 		} else {
 			PrintWriter out = response.getWriter();

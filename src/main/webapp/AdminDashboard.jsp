@@ -32,7 +32,7 @@
                 
               
                 <li>
-                    <a href="GestionDesProjets.jsp">
+                    <a href="DesplayProjet">
                         <span class="icon">
                              <ion-icon name="folder-open-outline"></ion-icon>
                         </span>
@@ -245,7 +245,7 @@
 
 </div>
 </div>
-</div>
+
 
 <script src="style/main.js"  ></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

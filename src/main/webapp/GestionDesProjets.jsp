@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="java.util.List, java.util.ArrayList" %>
+    <%@page import="model.Projet" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,7 +42,7 @@
                 
               
                 <li>
-                    <a href="GestionDesProjets.jsp">
+                    <a href="DesplayProjet">
                         <span class="icon">
                              <ion-icon name="folder-open-outline"></ion-icon>
                         </span>
@@ -90,6 +92,13 @@
             <div class="topbar">
                 <div class="toggle">
                     <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                
+                 <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                      
+                    </label>
                 </div>
 
                 
@@ -143,8 +152,12 @@
 
 
 
- <!-- Liste des Projets -->
-       <div class="details">
+<!-- Liste des Projets -->
+
+ 
+                   
+
+<div class="details">
     <div class="recentOrders">
         <div class="cardHeader">
             <h2>Gestion des Projets</h2>
@@ -164,41 +177,38 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <td>Projet Alpha</td>
-                    <td>Construction d'un bâtiment</td>
-                    <td>2025-01-01</td>
-                    <td>2025-12-31</td>
-                    <td>500,000 MAD</td>
-                    <td>
-                        <a href="#" class="btn edit">
-                            <ion-icon name="create-outline"></ion-icon> 
-                        </a>
-                        <a href="#" class="btn delete">
-                            <ion-icon name="trash-outline"></ion-icon> 
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Projet Beta</td>
-                    <td>Rénovation d'une école</td>
-                    <td>2025-03-01</td>
-                    <td>2025-09-30</td>
-                    <td>200,000 MAD</td>
-                    <td>
-                        <a href="#" class="btn edit">
-                            <ion-icon name="create-outline"></ion-icon> 
-                        </a>
-                        <a href="#" class="btn delete">
-                            <ion-icon name="trash-outline"></ion-icon> 
-                        </a>
-                    </td>
-                </tr>
-                <!-- Ajoute d'autres lignes ici -->
+            
+               <% List<Projet> p = (List<Projet>) request.getAttribute("p"); %>
+                <% if (p != null && !p.isEmpty()) { 
+                    for (Projet temp : p) { %>
+                    <tr>
+                        <td><%= temp.getNomProjet() %></td>
+                        <td><%= temp.getDescriptionProjet() %></td>
+                        <td><%= temp.getDateDebutProjrt() %></td>
+                        <td><%= temp.getDateFinProjet() %></td>
+                        <td><%= temp.getBudget() %></td>
+                        <td>
+                            <a href="#" class="btn edit">
+                                <ion-icon name="create-outline"></ion-icon> 
+                            </a>
+                            <a href="#" class="btn delete">
+                                <ion-icon name="trash-outline"></ion-icon> 
+                            </a>
+                        </td>
+                    </tr>
+               
+             <% } 
+                } else { %>
+                    <div class="col-12">
+                        <p class="text-center text-danger fw-bold">Aucune offre emploi trouvée.</p>
+                    </div>
+                <% } %>
             </tbody>
         </table>
     </div>
 </div>
+</div>
+
 
 
 <!-- Bootstrap JS Bundle (contient Popper.js et Bootstrap JS pour le fonctionnement des modales) -->

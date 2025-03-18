@@ -2,6 +2,7 @@ package dao;
 
 import java.sql.Connection;
 
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -39,7 +40,7 @@ public class Projet {
 		
 		
 		try {
-			 String sql ="SELECT * FROM Projets";
+			 String sql ="select * from Projets";
 			 Connection coon=DBConnect.getCoon();
 			 Statement smt =coon.createStatement();
 			 ResultSet rs=smt.executeQuery(sql);
@@ -51,7 +52,7 @@ public class Projet {
 				 pr.setDateDebutProjrt(rs.getString("dateDebutProjrt"));
 				 pr.setDateFinProjet(rs.getString("dateFinProjet"));
 				 pr.setBudget(rs.getDouble("budget"));
-			      p.add(pr);
+			     p.add(pr);
 				
 				 
 				 
@@ -63,6 +64,23 @@ public class Projet {
 		}
 		
 		return p;
+	}
+	
+	public static int deletProjet(int idProjet) {
+		int result =0;
+		try {
+			String sql="Delete from gestionConstruction.Projets where idProjet=?";
+			 Connection coon=DBConnect.getCoon();
+			 PreparedStatement pst=coon.prepareStatement(sql);
+			 pst.setInt(1, idProjet);
+			 result=pst.executeUpdate();
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
 	}
 	
 
