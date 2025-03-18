@@ -97,7 +97,7 @@ public class Projet {
 				 p.setNomProjet(rs.getString("NomProjet"));
 				 p.setDescriptionProjet(rs.getString("descriptionProjet"));
 				 p.setDateDebutProjrt(rs.getString("dateDebutProjrt"));
-				 p.setDateFinProjet(rs.getString("dateDebutProjrt"));
+				 p.setDateFinProjet(rs.getString("dateFinProjet"));
 				 p.setBudget(rs.getDouble("budget"));
 				 
 				
@@ -116,7 +116,7 @@ public class Projet {
 		int result=0;
 		
 		try {
-			String sql="update gestionConstruction.Projets set NomProjet=?,descriptionProjet=?,dateDebutProjrt=?,dateFinProjet=?,budget=? where idProjet=?";
+			String sql = "UPDATE gestionConstruction.Projets SET NomProjet=?, descriptionProjet=?, dateDebutProjrt=?, dateFinProjet=?, budget=? WHERE idProjet=?";
 			Connection coon=DBConnect.getCoon();
 			PreparedStatement pst=coon.prepareStatement(sql);
 			pst.setString(1,p.getNomProjet());
@@ -124,6 +124,7 @@ public class Projet {
 			pst.setString(3,p.getDateDebutProjrt());
 			pst.setString(4,p.getDateFinProjet());
 			pst.setDouble(5,p.getBudget());
+			pst.setInt(6,p.getIdProjet());
 			result=pst.executeUpdate();
 			
 		} catch (Exception e) {

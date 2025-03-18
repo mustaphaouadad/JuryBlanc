@@ -4,16 +4,7 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-  <servlet>
-  	<servlet-name>EditProjet</servlet-name>
-  	<display-name>EditProjet</display-name>
-  	<description></description>
-  	<servlet-class>servlet.EditProjet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>EditProjet</servlet-name>
-  	<url-pattern>/EditProjet</url-pattern>
-  </servlet-mapping>
+ 
   
   
   

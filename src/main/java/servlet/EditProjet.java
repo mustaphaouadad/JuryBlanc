@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 
 import jakarta.servlet.RequestDispatcher;
@@ -17,6 +18,7 @@ public class EditProjet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int idProjet =Integer.parseInt(request.getParameter("idProjet"));
+		System.out.println(idProjet);
 	Projet p= dao.Projet.getProjetById(idProjet);
 	RequestDispatcher dispatcher =request.getRequestDispatcher("EditProjet.jsp");
 	request.setAttribute("p",p);

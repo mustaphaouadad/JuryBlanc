@@ -22,3 +22,11 @@ toggle.onclick = function () {
   navigation.classList.toggle("active");
   main.classList.toggle("active");
 };
+
+function clearForm() {
+        document.getElementById("projectName").value = "";
+        document.getElementById("projectDescription").value = "";
+        document.getElementById("startDate").value = "";
+        document.getElementById("endDate").value = "";
+        document.getElementById("budget").value = "";
+    }

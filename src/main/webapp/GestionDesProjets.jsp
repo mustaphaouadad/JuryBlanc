@@ -188,7 +188,7 @@
                         <td><%= temp.getDateFinProjet() %></td>
                         <td><%= temp.getBudget() %></td>
                         <td>
-                            <a href="#" class="btn edit">
+                            <a href="EditProjet?idProjet=<%=temp.getIdProjet() %>" class="btn edit">
                                 <ion-icon name="create-outline"></ion-icon> 
                             </a>
                             <a type="button" href="DeleteProjet?idProjet=<%=temp.getIdProjet() %>" class="btn delete">
