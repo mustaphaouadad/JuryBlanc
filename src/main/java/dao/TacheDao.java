@@ -3,6 +3,10 @@ package dao;
 import java.sql.Connection;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import model.Tache;
 
@@ -25,6 +29,33 @@ public class TacheDao {
 			e.printStackTrace();
 		}	
 		return result;
+	}
+	public static List<Tache> getTachesByProjet(){
+		List<Tache> t=new ArrayList<Tache>();
+		try {
+			String sql="SELECT * FROM Taches WHERE idProjet = ?";
+			Connection coon=DBConnect.getCoon();
+			Statement smt = coon.createStatement();
+			ResultSet rs=smt.executeQuery(sql);
+			while (rs.next()) {
+				Tache tache =new Tache();
+				tache.setIdTache(rs.getInt("idTache"));
+				tache.setDescriptionTache(rs.getString("descriptionTache"));
+				tache.setDateDebutTache(rs.getString("dateDebutTache"));
+				tache.setDateFinTache(rs.getString("dateFinTache"));
+				tache.setIdProjet(rs.getInt("idProjet"));
+				t.add(tache);
+				
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		return t;
 	}
 	
 	
