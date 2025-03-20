@@ -4,6 +4,16 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>EditTache</servlet-name>
+  	<display-name>EditTache</display-name>
+  	<description></description>
+  	<servlet-class>servlet.EditTache</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>EditTache</servlet-name>
+  	<url-pattern>/EditTache</url-pattern>
+  </servlet-mapping>
  
   
  
