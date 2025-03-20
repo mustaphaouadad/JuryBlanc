@@ -58,6 +58,25 @@ public class TacheDao {
 
 	    return taches;
 	}
+	
+	public static int DeleteTache(int idTache) {
+		int result=0;
+		try {
+			String sql="DELETE FROM Taches WHERE idTache = ?";
+			Connection coon=DBConnect.getCoon();
+			PreparedStatement pst=coon.prepareStatement(sql);
+			pst.setInt(1,idTache);
+			result=pst.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return result;
+	}
 
 	
 	

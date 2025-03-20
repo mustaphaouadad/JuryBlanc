@@ -148,7 +148,7 @@
                           <a href="#" class="btn edit">
                                 <ion-icon name="create-outline"></ion-icon> 
                             </a>
-                            <a type="button" href="#" class="btn delete">
+                            <a type="button" href="DeleteTache?idTache=<%= temp.getIdTache() %>&idProjet=<%= temp.getIdProjet() %>" class="btn delete">
                                 <ion-icon name="trash-outline"></ion-icon> 
                             </a>
                             
