@@ -102,6 +102,30 @@ public class TacheDao {
 		
 		return t;
 	}
+	
+	public static int updateTache(Tache t) {
+		int result=0;
+		
+		try {
+			String sql="UPDATE Taches SET descriptionTache = ?, dateDebutTache = ?, dateFinTache = ? WHERE idTache = ?";
+			Connection coon=DBConnect.getCoon();
+			PreparedStatement pst =coon.prepareStatement(sql);
+			pst.setString(1,t.getDescriptionTache());
+			pst.setString(2,t.getDateDebutTache());
+			pst.setString(3,t.getDateFinTache());
+			pst.setInt(4,t.getIdTache());
+			result=pst.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		return result;
+	}
 
 	
 	
