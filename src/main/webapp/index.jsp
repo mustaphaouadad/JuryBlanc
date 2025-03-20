@@ -8,5 +8,7 @@
 </head>
 <body>
 <h2>Hello World!</h2>
+
+<a href="AdminDashboard.jsp">admin</a>
 </body>
 </html>

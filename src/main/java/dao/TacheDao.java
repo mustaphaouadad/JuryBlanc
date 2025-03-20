@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 
 import model.Tache;
@@ -11,7 +12,7 @@ public class TacheDao {
 		int result=0;
 		
 		try {
-			String sql="INSERT INTO Taches (descriptionTache, dateDebutTache, dateFinTache, idProjet) VALUES (?, ?, ?, ?)";
+			String sql= "INSERT INTO Taches (descriptionTache, dateDebutTache, dateFinTache, idProjet) VALUES (?, ?, ?, ?)";
 			Connection coon =DBConnect.getCoon();
 			PreparedStatement stm =coon.prepareStatement(sql);
 			stm.setString(1,t.getDescriptionTache());
@@ -22,11 +23,7 @@ public class TacheDao {
 			
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-		
-		
-		
-		
+		}	
 		return result;
 	}
 	

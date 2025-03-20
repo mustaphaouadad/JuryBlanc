@@ -19,6 +19,7 @@
 <body>
 
 
+
 <!-- nav -->
  <div class="navigation">
             <ul>
@@ -51,7 +52,7 @@
                 </li>
                 
                    <li>
-            <a href="#">
+            <a href="GestionDesTaches.jsp">
                 <span class="icon">
                     <ion-icon name="clipboard-outline"></ion-icon>
                 </span>
@@ -100,7 +101,8 @@
                       
                     </label>
                 </div>
-
+              
+              
                 
 
                 <div class="user">
@@ -151,6 +153,10 @@
 </div>
 
 
+                    
+                    
+
+
 
 <!-- Liste des Projets -->
 
@@ -182,7 +188,8 @@
                 <% if (p != null && !p.isEmpty()) { 
                     for (Projet temp : p) { %>
                     <tr>
-                        <td><%= temp.getNomProjet() %></td>
+                     <td><%= temp.getNomProjet() %></td>
+
                         <td><%= temp.getDescriptionProjet() %></td>
                         <td><%= temp.getDateDebutProjrt() %></td>
                         <td><%= temp.getDateFinProjet() %></td>
@@ -194,6 +201,11 @@
                             <a type="button" href="DeleteProjet?idProjet=<%=temp.getIdProjet() %>" class="btn delete">
                                 <ion-icon name="trash-outline"></ion-icon> 
                             </a>
+                            
+                            <a type="button" class="btn add ajouter-tache" href="GestionDesTaches.jsp?idProjet=<%= temp.getIdProjet() %>">
+                                 <ion-icon name="add-outline"></ion-icon> 
+                          </a>
+                            
                         </td>
                     </tr>
                
@@ -208,6 +220,7 @@
     </div>
 </div>
 </div>
+
 
 
 
