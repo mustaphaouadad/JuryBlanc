@@ -5,7 +5,7 @@ import java.sql.Connection;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,9 +73,34 @@ public class TacheDao {
 		}
 		
 		
-		
-		
 		return result;
+	}
+	
+	public static Tache getTachebyId(int idTache) {
+		Tache t=new Tache();
+		try {
+			String sql="select * from Taches where="+idTache;
+			Connection coon=DBConnect.getCoon();
+			Statement smt =coon.createStatement();
+			ResultSet rs=smt.executeQuery(sql);
+			while (rs.next()) {
+				t.setIdTache(rs.getInt("idTache"));
+				t.setDescriptionTache(rs.getString("descriptionTache"));
+				t.setDateDebutTache(rs.getString("dateDebutTache"));
+				t.setDateFinTache(rs.getString("dateFinTache"));
+				t.setIdProjet(rs.getInt("idProjet"));
+				
+				
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		return t;
 	}
 
 	
