@@ -202,7 +202,7 @@
                                 <ion-icon name="trash-outline"></ion-icon> 
                             </a>
                             
-                            <a type="button" class="btn add ajouter-tache" href="GestionDesTaches.jsp?idProjet=<%= temp.getIdProjet() %>">
+                            <a type="button" class="btn add ajouter-tache" href="DesplayTache?idProjet=<%= temp.getIdProjet() %>">
                                  <ion-icon name="add-outline"></ion-icon> 
                           </a>
                             

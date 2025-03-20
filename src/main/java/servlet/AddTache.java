@@ -35,7 +35,7 @@ public class AddTache extends HttpServlet {
 		int result=TacheDao.addTache(t);
 		
 		if (result>0) {
-			response.sendRedirect("DesplayProjet");
+			response.sendRedirect("DesplayTache?idProjet=" + idProjet);
 			
 		} else {
 			PrintWriter out = response.getWriter();
