@@ -145,7 +145,7 @@
                             <td><%= temp.getDateFinTache() %></td>
                             <td>
                             
-                          <a href="#" class="btn edit">
+                          <a href="EditTache?idTache=<%= temp.getIdTache() %>"class="btn edit">
                                 <ion-icon name="create-outline"></ion-icon> 
                             </a>
                             <a type="button" href="DeleteTache?idTache=<%= temp.getIdTache() %>&idProjet=<%= temp.getIdProjet() %>" class="btn delete">

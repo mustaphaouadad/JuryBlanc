@@ -21,9 +21,9 @@ public class EditTache extends HttpServlet {
 		int idTache=Integer.parseInt(request.getParameter("idTache"));
 		
 		Tache t= TacheDao.getTachebyId(idTache);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("");
 		request.setAttribute("t", t);
-		dispatcher.forward(request, response);
+		request.getRequestDispatcher("EditTache.jsp").forward(request, response);
+		
 		
 	}
 
@@ -33,16 +33,18 @@ public class EditTache extends HttpServlet {
 		String descriptionTache=request.getParameter("descriptionTache");
 		String dateDebutTache=request.getParameter("dateDebutTache");
 		String dateFinTache=request.getParameter("dateFinTache");
+		int idProjet = Integer.parseInt(request.getParameter("idProjet"));
 		
 		Tache t=new Tache();
 		t.setIdTache(idTache);
 		t.setDescriptionTache(descriptionTache);
 		t.setDateDebutTache(dateDebutTache);
 		t.setDateFinTache(dateFinTache);
+		t.setIdProjet(idProjet);
 		int result=TacheDao.updateTache(t);
 		
 		if (result>0) {
-        	response.sendRedirect("DesplayTache?idProjet="+ idTache);
+        	response.sendRedirect("DesplayTache?idProjet=" + idProjet);
 			
 		} else {
 			PrintWriter out=response.getWriter();

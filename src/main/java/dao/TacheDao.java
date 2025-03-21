@@ -79,16 +79,19 @@ public class TacheDao {
 	public static Tache getTachebyId(int idTache) {
 		Tache t=new Tache();
 		try {
-			String sql="select * from Taches where="+idTache;
+			String sql="SELECT * FROM Taches WHERE idTache = ?";
 			Connection coon=DBConnect.getCoon();
-			Statement smt =coon.createStatement();
-			ResultSet rs=smt.executeQuery(sql);
+			PreparedStatement pst = coon.prepareStatement(sql);
+	        pst.setInt(1, idTache);
+	        ResultSet rs = pst.executeQuery();
 			while (rs.next()) {
 				t.setIdTache(rs.getInt("idTache"));
 				t.setDescriptionTache(rs.getString("descriptionTache"));
 				t.setDateDebutTache(rs.getString("dateDebutTache"));
 				t.setDateFinTache(rs.getString("dateFinTache"));
 				t.setIdProjet(rs.getInt("idProjet"));
+
+				
 				
 				
 			}
@@ -107,13 +110,14 @@ public class TacheDao {
 		int result=0;
 		
 		try {
-			String sql="UPDATE Taches SET descriptionTache = ?, dateDebutTache = ?, dateFinTache = ? WHERE idTache = ?";
+			String sql="UPDATE Taches SET descriptionTache = ?, dateDebutTache = ?, dateFinTache = ?, idProjet = ? WHERE idTache = ?";
 			Connection coon=DBConnect.getCoon();
 			PreparedStatement pst =coon.prepareStatement(sql);
 			pst.setString(1,t.getDescriptionTache());
 			pst.setString(2,t.getDateDebutTache());
 			pst.setString(3,t.getDateFinTache());
-			pst.setInt(4,t.getIdTache());
+			pst.setInt(4,t.getIdProjet());
+			pst.setInt(5,t.getIdTache());
 			result=pst.executeUpdate();
 			
 		} catch (Exception e) {
