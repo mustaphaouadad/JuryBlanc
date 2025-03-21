@@ -127,8 +127,6 @@ public class TacheDao {
 		
 		
 		
-		
-		
 		return result;
 	}
 

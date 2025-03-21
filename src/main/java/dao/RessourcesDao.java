@@ -70,6 +70,7 @@ public class RessourcesDao {
 			 String sql = "SELECT * FROM Ressources WHERE idRessource = ?";
 			 Connection coon=DBConnect.getCoon();
 			 PreparedStatement pst =coon.prepareStatement(sql);
+			 pst.setInt(1, idRessource);
 			 ResultSet rs=pst.executeQuery();
 			 while (rs.next()) {
 				 
@@ -91,6 +92,33 @@ public class RessourcesDao {
 		
 		return r;
 	}
+	
+	public static int updateRessource(Ressources r) {
+		int result=0;
+		
+		
+		try {
+			String sql = "UPDATE Ressources SET nomRessource = ?, typeRessource = ?, quantite = ?, idFournisseur = ? WHERE idRessource = ?";
+			Connection coon=DBConnect.getCoon();
+			PreparedStatement pst =coon.prepareStatement(sql);
+			 pst.setString(1, r.getNomRessource());
+	         pst.setString(2, r.getTypeRessource());
+	         pst.setInt(3, r.getQuantite());
+	         pst.setInt(4, r.getIdFournisseur());
+	         pst.setInt(5, r.getIdRessource());
+	         result=pst.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		return result;
+	}
+	
+	
+	
+	
 	
 	
 
