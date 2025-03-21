@@ -2,6 +2,9 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 
 import model.Ressources;
 
@@ -29,6 +32,38 @@ public class RessourcesDao {
 		
 		return result;
 		
+	}
+	
+	public static List<Ressources>getAllRessources(){
+		List<Ressources> r=new ArrayList<Ressources>();
+		
+		try {
+			
+			 String sql = "SELECT * FROM Ressources";
+			Connection coon=DBConnect.getCoon();
+			PreparedStatement pst =coon.prepareStatement(sql);
+			ResultSet rs=pst.executeQuery();
+			while (rs.next()) {
+				Ressources ressources=new Ressources();
+				ressources.setIdRessource(rs.getInt("idRessource"));
+				ressources.setNomRessource(rs.getString("nomRessource"));
+                ressources.setTypeRessource(rs.getString("typeRessource"));
+                ressources.setQuantite(rs.getInt("quantite"));
+                ressources.setIdFournisseur(rs.getInt("idFournisseur"));
+                r.add(ressources);
+				
+			}
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		return r;
 	}
 
 }
