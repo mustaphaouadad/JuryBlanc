@@ -28,7 +28,7 @@ public class AddRessource extends HttpServlet {
 	        int result=RessourcesDao.addRessource(r);
 	        
 	        if (result>0) {
-				response.sendRedirect("DesplayProjet");
+				response.sendRedirect("DesplayRessources");
 				
 			} else {
 				PrintWriter out = response.getWriter();

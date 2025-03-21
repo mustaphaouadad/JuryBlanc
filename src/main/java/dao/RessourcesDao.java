@@ -60,10 +60,38 @@ public class RessourcesDao {
 		}
 		
 		
+		return r;
+	}
+	
+	public static Ressources getRessourceById(int idRessource) {
+		Ressources r=new Ressources();
+		
+		try {
+			 String sql = "SELECT * FROM Ressources WHERE idRessource = ?";
+			 Connection coon=DBConnect.getCoon();
+			 PreparedStatement pst =coon.prepareStatement(sql);
+			 ResultSet rs=pst.executeQuery();
+			 while (rs.next()) {
+				 
+				    r.setIdRessource(rs.getInt("idRessource"));
+	                r.setNomRessource(rs.getString("nomRessource"));
+	                r.setTypeRessource(rs.getString("typeRessource"));
+	                r.setQuantite(rs.getInt("quantite"));
+	                r.setIdFournisseur(rs.getInt("idFournisseur"));
+
+			}
+			 
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		
 		
 		return r;
 	}
+	
+	
 
 }
