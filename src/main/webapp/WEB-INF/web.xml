@@ -3,6 +3,16 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
+	<servlet>
+		<servlet-name>DesplayRessources</servlet-name>
+		<display-name>DesplayRessources</display-name>
+		<description></description>
+		<servlet-class>servlet.DesplayRessources</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DesplayRessources</servlet-name>
+		<url-pattern>/DesplayRessources</url-pattern>
+	</servlet-mapping>
 	
   
  
