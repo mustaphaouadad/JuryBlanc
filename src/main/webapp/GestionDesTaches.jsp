@@ -24,12 +24,12 @@
 <!-- nav -->
  <div class="navigation">
             <ul>
-                <li>
+                 <li>
                     <a href="#">
                         <span class="icon">
-                            <ion-icon name="logo-apple"></ion-icon>
+                           <ion-icon name="construct-outline"></ion-icon>
                         </span>
-                        <span class="title">Xenos Xenos</span>
+                        <span class="title">ConstructionXpert</span>
                     </a>
                 </li>
 
@@ -51,7 +51,7 @@
                         <span class="title">Gestion des Projets</span>
                     </a>
                 </li>
-                
+                <!--  
                    <li>
             <a href="GestionDesTaches.jsp">
                 <span class="icon">
@@ -59,7 +59,7 @@
                 </span>
                 <span class="title">Gestion des Tâches</span>
             </a>
-        </li>
+        </li>-->
                 
                   <li>
             <a href="#">

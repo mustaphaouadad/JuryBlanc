@@ -12,12 +12,12 @@
 <div class="container">
             <div class="navigation">
             <ul>
-                <li>
+                 <li>
                     <a href="#">
                         <span class="icon">
-                            <ion-icon name="logo-apple"></ion-icon>
+                           <ion-icon name="construct-outline"></ion-icon>
                         </span>
-                        <span class="title">Xenos Xenos</span>
+                        <span class="title">ConstructionXpert</span>
                     </a>
                 </li>
 
@@ -40,14 +40,14 @@
                     </a>
                 </li>
                 
-                   <li>
+            <!--        <li>
             <a href="GestionDesTaches.jsp">
                 <span class="icon">
                     <ion-icon name="clipboard-outline"></ion-icon>
                 </span>
                 <span class="title">Gestion des Tâches</span>
             </a>
-        </li>
+        </li> -->
                 
                   <li>
             <a href="#">
@@ -124,7 +124,7 @@
             <div class="cardName">Ressources</div>
         </div>
         <div class="iconBx">
-            <ion-icon name="construct-outline"></ion-icon>
+           <ion-icon name="hammer-outline"></ion-icon>
         </div>
     </div>
 
