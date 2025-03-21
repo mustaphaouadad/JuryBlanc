@@ -18,8 +18,8 @@ public class AddRessource extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		 String nom = request.getParameter("nomRessource");
-	        String type = request.getParameter("typeRessource");
-	        int quantite = Integer.parseInt(request.getParameter("quantite"));
+	      String type = request.getParameter("typeRessource");
+	     int quantite = Integer.parseInt(request.getParameter("quantite"));
 	        
 	        Ressources r=new Ressources();
 	        r.setNomRessource(nom);
@@ -32,7 +32,7 @@ public class AddRessource extends HttpServlet {
 				
 			} else {
 				PrintWriter out = response.getWriter();
-				out.println("Data not add ");
+				out.println("Data not add");
 
 			}
 		

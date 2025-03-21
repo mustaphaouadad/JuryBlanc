@@ -10,20 +10,21 @@ public class RessourcesDao {
 	
 	public static int addRessource(Ressources r) {
 		int result=0;
+		int idFournisseur=1;
 		
 		try {
-			Connection coon =DBConnect.getCoon();
-			String sql="INSERT INTO Ressources (idRessource, nomRessource, typeRessource, quantite, idFournisseur) VALUES (?, ?, ?, ?, ?)";
+			String sql = "INSERT INTO Ressources (nomRessource, typeRessource, quantite, idFournisseur) VALUES (?, ?, ?, ?)";
+			 Connection coon=DBConnect.getCoon();
 			PreparedStatement pst = coon.prepareStatement(sql);
-            pst.setInt(1, r.getIdRessource());
-            pst.setString(2, r.getNomRessource());
-            pst.setString(3, r.getTypeRessource());
-            pst.setInt(4, r.getQuantite());
-            pst.setInt(5, r.getIdFournisseur());
+     
+            pst.setString(1, r.getNomRessource());
+            pst.setString(2, r.getTypeRessource());
+            pst.setInt(3, r.getQuantite());
+            pst.setInt(4, idFournisseur);
             result=pst.executeUpdate();
 			
 		} catch (Exception e) {
-			
+			e.printStackTrace();
 		}
 		
 		return result;
