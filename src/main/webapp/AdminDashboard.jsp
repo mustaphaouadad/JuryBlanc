@@ -50,7 +50,7 @@
         </li> -->
                 
                   <li>
-            <a href="GestionDesRessources.jsp">
+            <a href="DesplayRessources">
                 <span class="icon">
                     <ion-icon name="hammer-outline"></ion-icon>
                 </span>

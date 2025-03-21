@@ -49,7 +49,7 @@
                 <td>
                     <!-- Actions to modify or delete -->
                     <a href="EditRessource?idRessource=<%= res.getIdRessource() %>">Modifier</a>
-                    <a href="DeleteRessource?idRessource=<%= res.getIdRessource() %>">Supprimer</a>
+                    <a href="Deleteressoures?idRessource=<%= res.getIdRessource() %>">Supprimer</a>
                 </td>
             </tr>
 <%
@@ -57,7 +57,7 @@
     }
 %>
         
-        
+        <a href="AdminDashboard.jsp">admin</a>
         
         </tbody>
         </table>
