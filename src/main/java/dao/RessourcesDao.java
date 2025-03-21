@@ -93,6 +93,24 @@ public class RessourcesDao {
 		return r;
 	}
 	
+	public static int deleteRessource(int idRessource) {
+		int result=0;
+		try {
+            String sql = "DELETE FROM Ressources WHERE idRessource = ?";
+            Connection coon=DBConnect.getCoon();
+			 PreparedStatement pst =coon.prepareStatement(sql);
+			 pst.setInt(1,idRessource);
+			 result=pst.executeUpdate();
+           
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	
+	
 	public static int updateRessource(Ressources r) {
 		int result=0;
 		
