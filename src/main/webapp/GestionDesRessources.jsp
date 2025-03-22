@@ -48,7 +48,7 @@
                 <td><%= res.getIdFournisseur() %></td>
                 <td>
                     <!-- Actions to modify or delete -->
-                    <a href="EditRessource?idRessource=<%= res.getIdRessource() %>">Modifier</a>
+                    <a href="EditResources?idRessource=<%= res.getIdRessource() %>">Modifier</a>
                     <a href="Deleteressoures?idRessource=<%= res.getIdRessource() %>">Supprimer</a>
                 </td>
             </tr>

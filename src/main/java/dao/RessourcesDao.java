@@ -113,7 +113,7 @@ public class RessourcesDao {
 	
 	public static int updateRessource(Ressources r) {
 		int result=0;
-		
+		int idFournisseur = 1;
 		
 		try {
 			String sql = "UPDATE Ressources SET nomRessource = ?, typeRessource = ?, quantite = ?, idFournisseur = ? WHERE idRessource = ?";
@@ -122,8 +122,9 @@ public class RessourcesDao {
 			 pst.setString(1, r.getNomRessource());
 	         pst.setString(2, r.getTypeRessource());
 	         pst.setInt(3, r.getQuantite());
-	         pst.setInt(4, r.getIdFournisseur());
+	         pst.setInt(4, idFournisseur);
 	         pst.setInt(5, r.getIdRessource());
+	         
 	         result=pst.executeUpdate();
 			
 		} catch (Exception e) {
