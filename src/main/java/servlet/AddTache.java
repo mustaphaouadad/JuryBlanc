@@ -27,6 +27,8 @@ public class AddTache extends HttpServlet {
 		String dateDebutTache =request.getParameter("dateDebutTache");
 		String dateFinTache =request.getParameter("dateFinTache");
 		
+		 String[] ressourcesSelected = request.getParameterValues("ressources");
+		
 		Tache t=new Tache();
 		t.setDescriptionTache(descriptionTache);
 		t.setDateDebutTache(dateDebutTache);
@@ -36,6 +38,9 @@ public class AddTache extends HttpServlet {
 		int result=TacheDao.addTache(t);
 		
 		if (result>0) {
+			for (String idRessource : ressourcesSelected) {
+                TacheDao.addTacheRessource(result, Integer.parseInt(idRessource));
+            }
 			response.sendRedirect("DesplayTache?idProjet=" + idProjet);
 			
 		} else {

@@ -9,6 +9,6 @@
 <body>
 <h2>Hello World!</h2>
 
-<a href="AdminDashboard.jsp">admin</a>
+<a href="Dashboard">admin</a>
 </body>
 </html>

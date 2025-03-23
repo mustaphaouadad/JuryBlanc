@@ -22,7 +22,7 @@
                 </li>
 
                 <li>
-                    <a href="#">
+                    <a href="Dashboard">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -100,7 +100,7 @@
                <div class="cardBox">
     <div class="card">
         <div>
-            <div class="numbers">12</div> 
+            <div class="numbers"><%= request.getAttribute("projetsCount") %></div> 
             <div class="cardName"> Projets</div>
         </div>
         <div class="iconBx">

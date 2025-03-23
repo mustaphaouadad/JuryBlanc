@@ -35,7 +35,7 @@
                 </li>
 
                 <li>
-                    <a href="AdminDashboard.jsp">
+                    <a href="Dashboard">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>

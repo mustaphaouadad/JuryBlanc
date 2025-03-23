@@ -10,27 +10,37 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import model.Ressources;
 import model.Tache;
 
 public class TacheDao {
 	
 	public static int addTache(Tache t) {
-		int result=0;
+		int idTache = -1;
 		
 		try {
 			String sql= "INSERT INTO Taches (descriptionTache, dateDebutTache, dateFinTache, idProjet) VALUES (?, ?, ?, ?)";
 			Connection coon =DBConnect.getCoon();
-			PreparedStatement stm =coon.prepareStatement(sql);
+			
+			PreparedStatement stm =coon.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
 			stm.setString(1,t.getDescriptionTache());
 			stm.setString(2,t.getDateDebutTache());
 			stm.setString(3,t.getDateFinTache());
 			stm.setInt(4,t.getIdProjet());
-			result= stm.executeUpdate();
+			int result= stm.executeUpdate();
+			
+			 if (result > 0) {
+		            ResultSet rs = stm.getGeneratedKeys();
+		            if (rs.next()) {
+		                idTache = rs.getInt(1);  
+		                
+		            }
+		        }
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}	
-		return result;
+		return idTache;
 	}
 	
 	
@@ -129,6 +139,48 @@ public class TacheDao {
 		
 		return result;
 	}
+	
+	public static int addTacheRessource(int idTache, int idRessource) {
+	    int result = 0;
+	    try {
+	    	
+	        String sql = "INSERT INTO TacheRessources (idTache, idRessource, quantiteAssocier) VALUES (?, ?, 1)";
+	        Connection conn = DBConnect.getCoon();
+	        PreparedStatement stmt = conn.prepareStatement(sql);
+	        stmt.setInt(1, idTache);
+	        stmt.setInt(2, idRessource);
+	        result = stmt.executeUpdate();
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return result;
+	}
+	
+	
+	
+	public static List<Ressources> getRessourcesByTache(int idTache) {
+	    List<Ressources> ressources = new ArrayList<>();
+	    try {
+	        String sql = "SELECT r.* FROM Ressources r INNER JOIN TacheRessources tr ON r.idRessource = tr.idRessource WHERE tr.idTache = ?";
+	        Connection conn = DBConnect.getCoon();
+	        PreparedStatement stmt = conn.prepareStatement(sql);
+	        stmt.setInt(1, idTache);
+	        ResultSet rs = stmt.executeQuery();
+
+	        while (rs.next()) {
+	        	Ressources res = new Ressources();
+	            res.setIdRessource(rs.getInt("idRessource"));
+	            res.setNomRessource(rs.getString("nomRessource"));
+	            res.setTypeRessource(rs.getString("typeRessource"));
+	            res.setQuantite(rs.getInt("quantite"));
+	            ressources.add(res);
+	        }
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+	    return ressources;
+	}
+
 
 	
 	

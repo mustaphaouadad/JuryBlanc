@@ -1,6 +1,8 @@
+<%@page import="dao.RessourcesDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@page import="model.Tache" %>
+    
     
 <!DOCTYPE html>
 <html>
@@ -46,6 +48,7 @@ if (t == null) {
             <label for="dateFinTache">Date de Fin :</label>
             <input type="date" id="endDate" name="dateFinTache" value="<%=t.getDateFinTache() %>" class="form-control" required>
           </div>
+          
           
            <div class="modal-footer">
         <button type="submit" class="btn btn-primary">Modifier Tache</button>

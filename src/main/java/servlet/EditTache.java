@@ -3,6 +3,7 @@ package servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import dao.RessourcesDao;
 import dao.TacheDao;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -42,6 +43,8 @@ public class EditTache extends HttpServlet {
 		t.setDateFinTache(dateFinTache);
 		t.setIdProjet(idProjet);
 		int result=TacheDao.updateTache(t);
+		
+		
 		
 		if (result>0) {
         	response.sendRedirect("DesplayTache?idProjet=" + idProjet);

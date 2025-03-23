@@ -1,9 +1,12 @@
+<%@page import="dao.TacheDao"%>
+<%@page import="dao.RessourcesDao"%>
 <%@page import="model.Tache"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.Connection, java.sql.PreparedStatement, java.sql.ResultSet" %>
 <%@ page import="dao.DBConnect" %>
 <%@ page import="java.util.List" %>
+<%@page import="model.Ressources"%>
 
 <!DOCTYPE html>
 <html>
@@ -34,7 +37,7 @@
                 </li>
 
                 <li>
-                    <a href="AdminDashboard.jsp">
+                    <a href="Dashboard">
                         <span class="icon">
                             <ion-icon name="home-outline"></ion-icon>
                         </span>
@@ -130,6 +133,7 @@
                 <th>Description</th>
                 <th>Date Début</th>
                 <th>Date Fin</th>
+                 <th>Ressources</th>
             </tr>
              </thead>
             
@@ -143,6 +147,20 @@
                             <td><%= temp.getDescriptionTache() %></td>
                             <td><%= temp.getDateDebutTache() %></td>
                             <td><%= temp.getDateFinTache() %></td>
+                            <td>
+                            
+                            <ul style="list-style-type: none; padding: 0; margin: 0;">
+                <%
+                    List<Ressources> resList = TacheDao.getRessourcesByTache(temp.getIdTache());
+                    for (Ressources res : resList) {
+                %>
+                    <li><%= res.getNomRessource() %></li>
+                <% } %>
+            </ul>
+                            
+                            
+                            
+                            </td>
                             <td>
                             
                           <a href="EditTache?idTache=<%= temp.getIdTache() %>"class="btn edit">
@@ -194,6 +212,20 @@
             <label for="dateFinTache">Date de fin :</label>
             <input type="date" name="dateFinTache" class="form-control" required>
             </div>
+            
+            <div class="form-group">
+            <label for="ressources">Choisir Ressources:</label>
+    <select name="ressources"  class="form-control" multiple required>
+        <% 
+            List<Ressources> ressources = RessourcesDao.getAllRessources();
+            for (Ressources r : ressources) { 
+        %>
+            <option value="<%= r.getIdRessource() %>"><%= r.getNomRessource() %></option>
+        <% } %>
+    </select>
+       </div>
+            
+           
       <div class="modal-footer">
       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
         <button type="submit" class="btn btn-primary">Ajouter Tache</button>
