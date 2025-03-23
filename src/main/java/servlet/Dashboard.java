@@ -17,12 +17,15 @@ public class Dashboard extends HttpServlet {
 		
 		 int projetsCount = DashboardDao.countProjets();
 		 int tachesCount = DashboardDao.countTaches();
+		  int ressourcesCount = DashboardDao.countRessources();
 		 
 		 
 		 
 		 
 		 request.setAttribute("projetsCount", projetsCount);
 		  request.setAttribute("tachesCount", tachesCount);
+		  request.setAttribute("ressourcesCount", ressourcesCount);
+
 		 
 		 request.getRequestDispatcher("AdminDashboard.jsp").forward(request, response);
 	}

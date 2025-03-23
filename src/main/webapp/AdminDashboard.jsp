@@ -120,7 +120,7 @@
 
     <div class="card">
         <div>
-            <div class="numbers">30</div> 
+            <div class="numbers"><%= request.getAttribute("ressourcesCount") %></div> 
             <div class="cardName">Ressources</div>
         </div>
         <div class="iconBx">

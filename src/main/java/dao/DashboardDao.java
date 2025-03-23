@@ -37,5 +37,21 @@ public class DashboardDao {
 	        }
 	        return count;
 	    }
+	 
+	 public static int countRessources() {
+	        int count = 0;
+	        try {
+	            String sql = "SELECT COUNT(*) FROM Ressources";
+	            Connection coon = DBConnect.getCoon();
+	            PreparedStatement pst = coon.prepareStatement(sql);
+	            ResultSet rs = pst.executeQuery();
+	            if (rs.next()) {
+	                count = rs.getInt(1);
+	            }
+	        } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	        return count;
+	    }
 
 }
