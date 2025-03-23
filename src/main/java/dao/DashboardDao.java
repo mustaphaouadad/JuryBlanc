@@ -53,5 +53,21 @@ public class DashboardDao {
 	        }
 	        return count;
 	    }
+	 
+	 public static double getTotalBudget() {
+		    double totalBudget = 0;
+		    try {
+		        String sql = "SELECT SUM(budget) FROM Projets";
+		        Connection coon = DBConnect.getCoon();
+		        PreparedStatement pst = coon.prepareStatement(sql);
+		        ResultSet rs = pst.executeQuery();
+		        if (rs.next()) {
+		            totalBudget = rs.getDouble(1);
+		        }
+		    } catch (Exception e) {
+		        e.printStackTrace();
+		    }
+		    return totalBudget;
+		}
 
 }

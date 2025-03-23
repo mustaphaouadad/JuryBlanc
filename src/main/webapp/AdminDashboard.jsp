@@ -130,7 +130,7 @@
 
     <div class="card">
         <div>
-            <div class="numbers">8</div> 
+            <div class="numbers">1</div> 
             <div class="cardName">Fournisseurs</div>
         </div>
         <div class="iconBx">
@@ -140,7 +140,7 @@
     
      <div class="card">
                     <div>
-                        <div class="numbers">$7,842</div>
+                        <div class="numbers">$<%= request.getAttribute("totalBudget") %></div>
                         <div class="cardName">Earning</div>
                     </div>
 

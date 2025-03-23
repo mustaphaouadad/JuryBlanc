@@ -18,6 +18,7 @@ public class Dashboard extends HttpServlet {
 		 int projetsCount = DashboardDao.countProjets();
 		 int tachesCount = DashboardDao.countTaches();
 		  int ressourcesCount = DashboardDao.countRessources();
+		  double totalBudget = DashboardDao.getTotalBudget();
 		 
 		 
 		 
@@ -25,6 +26,7 @@ public class Dashboard extends HttpServlet {
 		 request.setAttribute("projetsCount", projetsCount);
 		  request.setAttribute("tachesCount", tachesCount);
 		  request.setAttribute("ressourcesCount", ressourcesCount);
+		  request.setAttribute("totalBudget", totalBudget);
 
 		 
 		 request.getRequestDispatcher("AdminDashboard.jsp").forward(request, response);
