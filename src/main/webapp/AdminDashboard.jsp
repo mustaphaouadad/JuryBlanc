@@ -110,7 +110,7 @@
 
     <div class="card">
         <div>
-            <div class="numbers">45</div> 
+            <div class="numbers"><%= request.getAttribute("tachesCount") %></div> 
             <div class="cardName">Tâches</div>
         </div>
         <div class="iconBx">
