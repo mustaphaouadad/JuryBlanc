@@ -25,7 +25,7 @@
                 </div>
                 <div class="card-body">
                  
-                  <form action="EditProjet" method="post">
+                  <form id="taskForm" action="EditProjet" method="post">
           <div class="form-group">
           <input type="hidden" name="idProjet" value="<%=p.getIdProjet()%>">
             <label for="projectName">Nom du Projet :</label>
@@ -38,7 +38,7 @@
           </div>
           <div class="form-group">
             <label for="startDate">Date de Début :</label>
-            <input type="date" id="startDate" name="startDate" value="<%=p.getDateDebutProjrt() %>" class="form-control" required>
+            <input type="date" id="dateDebutTache" name="startDate" value="<%=p.getDateDebutProjrt() %>" class="form-control" required>
           </div>
           <div class="form-group">
             <label for="endDate">Date de Fin :</label>
@@ -54,6 +54,11 @@
               <a type="button" href="DesplayProjet" class="btn btn-secondary" >Fermer</a>
       </div>
       </form>
+      </div>
+      </div>
+      </div>
+      </div>
+      
       
 
 

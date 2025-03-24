@@ -202,8 +202,8 @@
             <input type="hidden" name="idProjet" value="<%= idProjet %>">
             <div class="form-group">
             <label for="descriptionTache" >Description :</label>
-            <textarea id="descriptionTache" name="descriptionTache" class="form-control" required></textarea>
-            <small class="text-danger" id="descError"></small>
+            <textarea  name="descriptionTache" class="form-control" required></textarea>
+            
             </div>
           <div class="form-group">
             <label for="dateDebutTache">Date de début :</label>

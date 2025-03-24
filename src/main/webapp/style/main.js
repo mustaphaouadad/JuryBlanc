@@ -10,7 +10,7 @@ function activeLink() {
 
 list.forEach((item) => item.addEventListener("mouseover", activeLink));
 
-// Menu Toggle
+
 let toggle = document.querySelector(".toggle");
 let navigation = document.querySelector(".navigation");
 let main = document.querySelector(".main");
@@ -39,7 +39,7 @@ document.getElementById("taskForm").addEventListener("submit", function(event) {
     dateFinError.innerText = "";
 
 
-    // التحقق من تاريخ البداية والنهاية
+     
     if (dateDebut === "") {
         dateDebutError.innerText = "Veuillez choisir une date de début.";
         isValid = false;
@@ -53,7 +53,7 @@ document.getElementById("taskForm").addEventListener("submit", function(event) {
         isValid = false;
     }
 
-    // منع الإرسال إذا كانت هناك أخطاء
+    
     if (!isValid) {
         event.preventDefault();
     }

@@ -127,7 +127,7 @@
       </div>
       <div class="modal-body">
         <!-- Formulaire de création de projet -->
-        <form action="AddProjet" method="post">
+        <form id="taskForm" action="AddProjet" method="post">
           <div class="form-group">
             <label for="projectName">Nom du Projet :</label>
             <input type="text" id="projectName" name="projectName" class="form-control" required>
@@ -138,11 +138,13 @@
           </div>
           <div class="form-group">
             <label for="startDate">Date de Début :</label>
-            <input type="date" id="startDate" name="startDate" class="form-control" required>
+            <input type="date" id="dateDebutTache" name="startDate" class="form-control" required>
+            <small class="text-danger" id="dateDebutError"></small>
           </div>
           <div class="form-group">
             <label for="endDate">Date de Fin :</label>
-            <input type="date" id="endDate" name="endDate" class="form-control" required>
+            <input type="date" id="dateFinTache" name="endDate" class="form-control" required>
+            <small class="text-danger" id="dateFinError"></small>
           </div>
           <div class="form-group">
             <label for="budget">Budget :</label>
