@@ -232,19 +232,9 @@
                 </div>
 
 
-
-
-               
-
-
-
-
-
-
-
-
 </div>
 </div>
+
 
 
 <script src="style/main.js"  ></script>

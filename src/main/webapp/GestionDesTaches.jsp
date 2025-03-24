@@ -154,7 +154,7 @@
                     List<Ressources> resList = TacheDao.getRessourcesByTache(temp.getIdTache());
                     for (Ressources res : resList) {
                 %>
-                    <li><%= res.getNomRessource() %></li>
+                    <li><%= res.getNomRessource()%>(Quantité: <%= res.getQuantite() %>) </li>
                 <% } %>
             </ul>
                             
@@ -198,19 +198,22 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action="AddTache" method="post">
+        <form  id="taskForm" action="AddTache" method="post">
             <input type="hidden" name="idProjet" value="<%= idProjet %>">
             <div class="form-group">
             <label for="descriptionTache" >Description :</label>
-            <textarea name="descriptionTache" class="form-control" required></textarea>
+            <textarea id="descriptionTache" name="descriptionTache" class="form-control" required></textarea>
+            <small class="text-danger" id="descError"></small>
             </div>
           <div class="form-group">
             <label for="dateDebutTache">Date de début :</label>
-            <input type="date" name="dateDebutTache" class="form-control" required>
+            <input type="date" id="dateDebutTache" name="dateDebutTache" class="form-control" required>
+            <small class="text-danger" id="dateDebutError"></small>
             </div>
           <div class="form-group">
             <label for="dateFinTache">Date de fin :</label>
-            <input type="date" name="dateFinTache" class="form-control" required>
+            <input type="date" id="dateFinTache" name="dateFinTache" class="form-control" required>
+            <small class="text-danger" id="dateFinError"></small>
             </div>
             
             <div class="form-group">

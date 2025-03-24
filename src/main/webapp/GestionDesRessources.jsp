@@ -163,8 +163,8 @@
         <thead>
             <tr>
                 
-                <th>Nom de la Ressource</th>
-                <th>Type de la Ressource</th>
+                <th>Name</th>
+                <th>Type</th>
                 <th>Quantité</th>
                 <th>ID Fournisseur</th>
                 <th>Actions</th>

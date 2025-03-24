@@ -23,3 +23,42 @@ toggle.onclick = function () {
 
 
 
+document.getElementById("taskForm").addEventListener("submit", function(event) {
+    let isValid = true;
+
+   
+    let dateDebut = document.getElementById("dateDebutTache").value;
+    let dateFin = document.getElementById("dateFinTache").value;
+
+
+    let dateDebutError = document.getElementById("dateDebutError");
+    let dateFinError = document.getElementById("dateFinError");
+
+   
+    dateDebutError.innerText = "";
+    dateFinError.innerText = "";
+
+
+    // التحقق من تاريخ البداية والنهاية
+    if (dateDebut === "") {
+        dateDebutError.innerText = "Veuillez choisir une date de début.";
+        isValid = false;
+    }
+    if (dateFin === "") {
+        dateFinError.innerText = "Veuillez choisir une date de fin.";
+        isValid = false;
+    }
+    if (dateDebut !== "" && dateFin !== "" && dateDebut > dateFin) {
+        dateFinError.innerText = "La date de fin doit être après la date de début.";
+        isValid = false;
+    }
+
+    // منع الإرسال إذا كانت هناك أخطاء
+    if (!isValid) {
+        event.preventDefault();
+    }
+});
+
+
+
+

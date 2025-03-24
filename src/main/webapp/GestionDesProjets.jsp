@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="style/style.css">
+ <link rel="stylesheet" href="style/style.css">
 
     <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -27,9 +27,9 @@
 
 
 <!-- nav -->
- <div class="navigation">
+   <div class="navigation">
             <ul>
-                <li>
+                 <li>
                     <a href="#">
                         <span class="icon">
                            <ion-icon name="construct-outline"></ion-icon>
@@ -57,7 +57,7 @@
                     </a>
                 </li>
                 
-                 <!--   <li>
+            <!--        <li>
             <a href="GestionDesTaches.jsp">
                 <span class="icon">
                     <ion-icon name="clipboard-outline"></ion-icon>
@@ -179,10 +179,10 @@
         <table class="project-table">
             <thead>
                 <tr>
-                    <th>Nom du Projet</th>
+                    <th>Name</th>
                     <th>Description</th>
-                    <th>Date de Début</th>
-                    <th>Date de Fin</th>
+                    <th>Date Début</th>
+                    <th>Date Fin</th>
                     <th>Budget</th>
                     <th>Actions</th>
                 </tr>
@@ -226,6 +226,10 @@
     </div>
 </div>
 </div>
+
+
+
+
 
 
 
