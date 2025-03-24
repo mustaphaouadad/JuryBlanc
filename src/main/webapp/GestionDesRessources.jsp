@@ -108,7 +108,7 @@
                 
 
                 <div class="user">
-                    <img src="#" alt="">
+                    <img src="img/1.jpeg" alt="Admin">
                 </div>
             </div>
         
@@ -117,7 +117,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="addProjectModalLabel">Créer un Nouveau Projet</h5>
+        <h5 class="modal-title" id="addProjectModalLabel">Créer un Nouveau Ressoueces</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -183,7 +183,7 @@
                 <td><%= res.getQuantite() %></td>
                 <td><%= res.getIdFournisseur() %></td>
                 <td>
-                    <!-- Actions to modify or delete -->
+                   
                     <a href="EditResources?idRessource=<%= res.getIdRessource() %>"class="btn edit">
                     <ion-icon name="create-outline"></ion-icon>
                     </a>
@@ -205,7 +205,7 @@
 </div>
 </div>
 
-<!-- Bootstrap JS Bundle (contient Popper.js et Bootstrap JS pour le fonctionnement des modales) -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="style/main.js"  ></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

@@ -107,7 +107,7 @@
                 </div>
                 
                  <div class="user">
-                    <img src="#" alt="">
+                   <img src="img/1.jpeg" alt="Admin">
                 </div>
             </div>
                 

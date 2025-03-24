@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="user">
-                    <img src="#" alt="">
+                    <img src="img/1.jpeg" alt="Admin">
                 </div>
             </div>
             
@@ -159,7 +159,7 @@
                     <table>
                         <tr>
                             <td width="60px">
-                                <div class="imgBx"><img src="#" alt=""></div>
+                                <div class="imgBx"><img src="img/2.jpeg" alt=""></div>
                             </td>
                             <td>
                                 <h4>David <br> <span>Italy</span></h4>
@@ -168,7 +168,7 @@
 
                         <tr>
                             <td width="60px">
-                                <div class="imgBx"><img src="#" alt=""></div>
+                                <div class="imgBx"><img src="img/3.webp" alt=""></div>
                             </td>
                             <td>
                                 <h4>Amit <br> <span>India</span></h4>
@@ -177,7 +177,7 @@
 
                         <tr>
                             <td width="60px">
-                                <div class="imgBx"><img src="#" alt=""></div>
+                                <div class="imgBx"><img src="img/2.jpeg" alt=""></div>
                             </td>
                             <td>
                                 <h4>David <br> <span>Italy</span></h4>
@@ -186,7 +186,7 @@
 
                         <tr>
                             <td width="60px">
-                                <div class="imgBx"><img src="#" alt=""></div>
+                                <div class="imgBx"><img src="img/3.webp" alt=""></div>
                             </td>
                             <td>
                                 <h4>Amit <br> <span>India</span></h4>
@@ -195,7 +195,7 @@
 
                         <tr>
                             <td width="60px">
-                                <div class="imgBx"><img src="#" alt=""></div>
+                                <div class="imgBx"><img src="img/2.jpeg" alt=""></div>
                             </td>
                             <td>
                                 <h4>David <br> <span>Italy</span></h4>
@@ -204,7 +204,7 @@
 
                         <tr>
                             <td width="60px">
-                                <div class="imgBx"><img src="#" alt=""></div>
+                                <div class="imgBx"><img src="img/3.webp" alt=""></div>
                             </td>
                             <td>
                                 <h4>Amit <br> <span>India</span></h4>
@@ -213,7 +213,7 @@
 
                         <tr>
                             <td width="60px">
-                                <div class="imgBx"><img src="#" alt=""></div>
+                                <div class="imgBx"><img src="img/2.jpeg" alt=""></div>
                             </td>
                             <td>
                                 <h4>David <br> <span>Italy</span></h4>
@@ -222,7 +222,7 @@
 
                         <tr>
                             <td width="60px">
-                                <div class="imgBx"><img src="#" alt=""></div>
+                                <div class="imgBx"><img src="img/3.webp" alt=""></div>
                             </td>
                             <td>
                                 <h4>Amit <br> <span>India</span></h4>
