@@ -60,5 +60,10 @@ document.getElementById("taskForm").addEventListener("submit", function(event) {
 });
 
 
+function confirmDelete() {
+    return confirm("Êtes-vous sûr de vouloir supprimer ?");
+}
+
+
 
 

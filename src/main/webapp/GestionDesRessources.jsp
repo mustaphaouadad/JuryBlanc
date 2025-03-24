@@ -187,7 +187,7 @@
                     <a href="EditResources?idRessource=<%= res.getIdRessource() %>"class="btn edit">
                     <ion-icon name="create-outline"></ion-icon>
                     </a>
-                    <a href="Deleteressoures?idRessource=<%= res.getIdRessource() %>" class="btn delete">
+                    <a href="Deleteressoures?idRessource=<%= res.getIdRessource() %>" class="btn delete" onclick="return confirmDelete();">
                       <ion-icon name="trash-outline"></ion-icon> 
                     </a>
                 </td>

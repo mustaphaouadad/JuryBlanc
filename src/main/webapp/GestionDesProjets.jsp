@@ -206,7 +206,7 @@
                             <a href="EditProjet?idProjet=<%=temp.getIdProjet() %>" class="btn edit">
                                 <ion-icon name="create-outline"></ion-icon> 
                             </a>
-                            <a type="button" href="DeleteProjet?idProjet=<%=temp.getIdProjet() %>" class="btn delete">
+                            <a type="button" href="DeleteProjet?idProjet=<%=temp.getIdProjet() %>" class="btn delete" onclick="return confirmDelete();">
                                 <ion-icon name="trash-outline"></ion-icon> 
                             </a>
                             
