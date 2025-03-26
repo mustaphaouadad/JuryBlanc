@@ -186,6 +186,7 @@
                     <th>Date Début</th>
                     <th>Date Fin</th>
                     <th>Budget</th>
+                    <th></th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -202,6 +203,7 @@
                         <td><%= temp.getDateDebutProjrt() %></td>
                         <td><%= temp.getDateFinProjet() %></td>
                         <td><%= temp.getBudget() %></td>
+                        <td></td>
                         <td>
                             <a href="EditProjet?idProjet=<%=temp.getIdProjet() %>" class="btn edit">
                                 <ion-icon name="create-outline"></ion-icon> 

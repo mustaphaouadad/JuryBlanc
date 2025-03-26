@@ -166,7 +166,8 @@
                 <th>Name</th>
                 <th>Type</th>
                 <th>Quantité</th>
-                <th>ID Fournisseur</th>
+                <th>ID Four</th>
+                
                 <th>Actions</th>
             </tr>
         </thead>
@@ -182,6 +183,7 @@
                 <td><%= res.getTypeRessource() %></td>
                 <td><%= res.getQuantite() %></td>
                 <td><%= res.getIdFournisseur() %></td>
+               
                 <td>
                    
                     <a href="EditResources?idRessource=<%= res.getIdRessource() %>"class="btn edit">

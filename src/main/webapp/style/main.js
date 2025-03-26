@@ -23,6 +23,8 @@ toggle.onclick = function () {
 
 
 
+
+
 document.getElementById("taskForm").addEventListener("submit", function(event) {
     let isValid = true;
 
